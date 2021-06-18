@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\DatosModel;
-class General extends BaseController
+class Miniproyecto extends BaseController
 {
 	public function index()
 	{
@@ -15,7 +15,7 @@ class General extends BaseController
 		];
 		return view('listado',$data);
 	}
-}
+
         public function obtenerDatos($id) {
 		$model = new DatosModel();
 		$data = ["id" => $id];
@@ -29,8 +29,8 @@ class General extends BaseController
 		$model = new DatosModel();
 		$data = [
 			"nombre" => $_POST ['nombre'],
-			"a_paterno" => $_POST ['apaterno'],
-			"a_materno" => $_POST ['materno'],
+			"apellido_paterno" => $_POST ['apaterno'],
+			"apellido_materno" => $_POST ['amaterno'],
 		];
 		$respuesta = $model ->insertar($data);
 		
@@ -48,8 +48,8 @@ class General extends BaseController
 		$model = new DatosModel();
 		$data = [
 			"nombre" => $_POST ['nombre'],
-			"a_paterno" => $_POST ['paterno'],
-			"a_materno" => $_POST ['materno'],
+			"apellido_paterno" => $_POST ['apaterno'],
+			"apellido_materno" => $_POST ['amaterno'],
 			
 			
 		];
