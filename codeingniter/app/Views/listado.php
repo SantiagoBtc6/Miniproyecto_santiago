@@ -15,7 +15,7 @@
       <h1>Agregar Registro</h1>
      <div class="row">
        <div class="col-sm-12">
-         <form action=" ">
+         <form action="<?PHP echo base_url('/index.php/crear')?>" method="POST">
            <label for="nombre">Nombre:</label>
            <input type="text" id="nombre" name="nombre" class="form-control" required>
            <label for="apaterno">Apellido Paterno:</label>
@@ -42,8 +42,8 @@
                   <th><?php echo $dato->nombre ?></th>
                   <th><?php echo $dato->apellido_paterno ?></th>
                   <th><?php echo $dato->apellido_materno ?></th>
-                  <th> <a href="<?php base_url('/index.php/editar') ?>" class="btn btn-sm btn-warning">Editar</a> </th>
-                  <th> <a href="<?php base_url('/index.php/eliminar') ?>" class="btn btn-sm btn-danger">Eliminar</a> </th>
+                  <th> <a href="<?php echo base_url('/index.php/obtenerInformacion').'/'.$dato->id ?>" class="btn btn-sm btn-warning">Editar</a></th>
+                  <th> <a href="<?php echo base_url('/index.php/eliminar').'/'.$dato->id ?>" class="btn btn-sm btn-danger">Eliminar</a> </th>
                 </tr>
                 <?php endforeach ?>
               </table>
